@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const { SuccessResponseObject } = require('../common/http');
 const demo = require('./demo.route');
+const bcrypt = require("bcrypt");
 
 const r = Router();
 
