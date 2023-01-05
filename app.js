@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use(helmet());
 app.use('/', routes);
 // app.use("/auth", require("./routes/auth"));
- app.use("/posts", require("./routes/posts"));
+//  app.use("/posts", require("./routes/posts"));
 
 
 // default catch all handler
