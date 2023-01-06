@@ -5,7 +5,7 @@ const r = Router();
  
 r.get('/', (req, res) => {
   const users = [];
-
+    console.log(Db.handler);
 
     res.json(Db.handler);
     //   Db.query('SELECT fullname from users', (err, rows, fields) => {
