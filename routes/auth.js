@@ -5,7 +5,8 @@ const JWT = require("jsonwebtoken");
 const { users } = require("../database");
 
 require("dotenv").config();
-
+var mysql = require('mysql');
+ 
 // Sign up
 router.post(
   "/signup",
