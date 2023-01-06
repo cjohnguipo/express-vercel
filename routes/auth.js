@@ -3,6 +3,7 @@ const { check, validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const JWT = require("jsonwebtoken");
 const { users } = require("../database");
+// const Db = require('../common/utils');
 
 require("dotenv").config(); 
  
