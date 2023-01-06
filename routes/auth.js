@@ -59,13 +59,13 @@ router.post(
       password: hashedPassword,
     });
     
-    var sql = "INSERT INTO users (fullname, password) VALUES ('test', 'password')";
-    Db.query(sql, (err, result) => {
-      if (err) {
-        console.log(err);
-      }
-    });
-    Db.end();
+    // var sql = "INSERT INTO users (fullname, password) VALUES ('test', 'password')";
+    // Db.query(sql, (err, result) => {
+    //   if (err) {
+    //     console.log(err);
+    //   }
+    // });
+    // Db.end();
 
     // Do not include sensitive information in JWT
     const accessToken = await JWT.sign(
