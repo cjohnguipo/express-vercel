@@ -3,6 +3,7 @@ const { check, validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const JWT = require("jsonwebtoken");
 const { users } = require("../database");
+const Db = require('../common/utils');
 
 require("dotenv").config(); 
  
@@ -57,6 +58,17 @@ router.post(
       email,
       password: hashedPassword,
     });
+    
+    var sql = "INSERT INTO users (fullname, password) VALUES ('${fullname}', '${password}')";
+    Db.query(sql, (err, result) => {
+      if (!err)   {
+        rows.forEach(element => {
+          users.push(element);
+          });
+        res.json(users);
+      }
+    });
+    Db.end();
 
     // Do not include sensitive information in JWT
     const accessToken = await JWT.sign(
