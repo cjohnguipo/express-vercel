@@ -12,11 +12,11 @@ app.use('/', routes);
 
 app.use("/auth", require("./routes/auth"));
 app.use("/posts", require("./routes/posts"));
+app.use("/users", require("./routes/users"));
 
 
 // default catch all handler
 //app.all('*', (req, res) => res.status(404).json(new ErrorResponseObject('route not defined')));
-
 
 
 

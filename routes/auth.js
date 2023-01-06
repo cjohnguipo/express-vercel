@@ -4,9 +4,9 @@ const bcrypt = require("bcryptjs");
 const JWT = require("jsonwebtoken");
 const { users } = require("../database");
 
-require("dotenv").config();
-var mysql = require('mysql');
+require("dotenv").config(); 
  
+
 // Sign up
 router.post(
   "/signup",
