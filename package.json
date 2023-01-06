@@ -13,7 +13,8 @@
     "express": "^4.17.1",
     "express-validator": "^6.14.2",
     "helmet": "^4.6.0",
-    "jsonwebtoken": "^9.0.0"
+    "jsonwebtoken": "^9.0.0",
+    "mysql": "^2.18.1"
   },
   "keywords": [
     "vercel"
