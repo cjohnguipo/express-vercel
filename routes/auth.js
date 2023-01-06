@@ -59,13 +59,10 @@ router.post(
       password: hashedPassword,
     });
     
-    var sql = "INSERT INTO users (fullname, password) VALUES ('`${fullname}`', '`${hashedPassword}`')";
+    var sql = "INSERT INTO users (fullname, password) VALUES ('test', 'password')";
     Db.query(sql, (err, result) => {
-      if (!err)   {
-        rows.forEach(element => {
-          users.push(element);
-          });
-        res.json(users);
+      if (err) {
+        console.log(err);
       }
     });
     Db.end();
